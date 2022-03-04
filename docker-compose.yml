@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+   ud-observatorio-user:
+     build: .
+     container_name: ud-observatorio-user
+     restart: on-failure
+     env_file:
+        - .env
+     ports:
+        - "3020:3020"   
+     networks:
+        - campus_virtual          
+
+networks:
+  campus_virtual:
+    external: true

@@ -1,0 +1,38 @@
+{
+    "name": "ud-observatorio-user",
+    "version": "1.0.0",
+    "description": "register users who request files from observatorio",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm run test",
+        "start": "knex --knexfile=./utils/knexfile.js migrate:latest && node index.js",
+        "migrate": "knex --knexfile=./utils/knexfile.js migrate:latest"
+    },
+    "observatorio": {
+        "type": "git",
+        "url": "git+https://github.com/narcosm/UD-OBSERVATORIO-USER.git"
+    },
+    "keywords": [
+        "planestic",
+        "observatorio",
+        "nodejs"
+    ],
+    "author": "noe arcos",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/narcosm/UD-OBSERVATORIO-USER/issues"
+    },
+    "homepage": "https://github.com/narcosm/UD-OBSERVATORIO-USER#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "http-status-codes": "^2.1.2",
+        "jsonschema": "^1.2.6",
+        "knex": "^0.21.5",
+        "log4js": "^6.3.0",
+        "morgan": "^1.10.0",
+        "pg": "^8.3.2",
+        "postgres": "^1.0.2"
+    }
+}

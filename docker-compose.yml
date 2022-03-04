@@ -4,7 +4,7 @@ networks:
 
 services:
    ud-observatorio-user:
-     image: planesticud/ud-observatorio-user
+     image: planesticud/ud-observatorio-user:latest
      container_name: ud-observatorio-user
      restart: on-failure
      env_file:

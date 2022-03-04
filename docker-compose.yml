@@ -1,14 +1,14 @@
 version: '3'
+networks:
+ campus_virtual:
 
 services:
    ud-observatorio-user:
-     build: .
+     image: planesticud/ud-observatorio-user
      container_name: ud-observatorio-user
      restart: on-failure
      env_file:
         - .env
-     ports:
-        - "3020:3020"   
      networks:
         - campus_virtual          
 
